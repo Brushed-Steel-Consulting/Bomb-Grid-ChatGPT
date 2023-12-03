@@ -1,0 +1,74 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.game-container {
+    border: 1px solid #ddd;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.control-panel {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.control-panel button, .control-panel select {
+    padding: 5px 10px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.control-panel div {
+    margin-top: 10px;
+    font-size: 1em;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(9, 30px); /* Adjust based on difficulty level */
+    grid-gap: 2px;
+}
+
+.grid-cell {
+    width: 30px;
+    height: 30px;
+    background-color: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-weight: bold;
+    border: 1px solid #ddd;
+}
+
+.grid-cell.revealed {
+    background-color: #e0e0e0;
+}
+
+.grid-cell.mine {
+    background-color: red;
+}
+
+.grid-cell.flagged {
+    background-color: orange;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .grid {
+        grid-template-columns: repeat(9, 20px);
+    }
+    .grid-cell {
+        width: 20px;
+        height: 20px;
+    }
+}
