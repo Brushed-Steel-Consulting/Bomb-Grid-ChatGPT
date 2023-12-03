@@ -1,0 +1,59 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+#game-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#game-board {
+    width: 300px;
+    height: 300px;
+    border: 1px solid #ccc;
+    display: grid;
+    grid-template-columns: repeat(9, 33px);
+    grid-template-rows: repeat(9, 33px);
+}
+
+.tile {
+    border: 1px solid #ddd;
+    cursor: pointer;
+    text-align: center;
+    line-height: 33px;
+}
+
+.tile:hover {
+    background-color: #eee;
+}
+
+.flagged {
+    background-color: #ff9999;
+}
+
+.revealed {
+    background-color: #ddd;
+}
+
+.mine {
+    background-color: #ff0000;
+}
+
+#game-info {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#timer, #flagged-mines {
+    font-weight: bold;
+}
+
+#restart-button {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
